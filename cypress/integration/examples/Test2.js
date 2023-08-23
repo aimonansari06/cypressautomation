@@ -6,7 +6,7 @@
 
 describe("My First Test Suite2",function(){
 
-    it("Sales Agent Portal Login", function(){
+    it("SAP", function(){
        LoginSAP("AutoSalesAgent","Sales123","0028","0028 - Automation Builders Inc.","0002","Grandview B")
     })
 
