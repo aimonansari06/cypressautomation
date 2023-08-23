@@ -12,7 +12,7 @@ describe("Test Suite2",function(){
     
     it('Understanding Hooks & Fixtures',function(){
         const homePage= new HomePage()
-        cy.visit('https://rahulshettyacademy.com/angularpractice/').screenshot()
+        cy.visit('https://rahulshettyacademy.com/angularpractice/')
         homePage.getNameTextbox().type(this.data.name).screenshot()
         homePage.getGenderDropdown().select(this.data.gender).screenshot()
         homePage.getNameTextbox().should('have.attr','minlength','2').screenshot()
