@@ -1,0 +1,26 @@
+{
+  "name": "cypressproj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules\\.bin\\cypress open",
+    "cypress-dashboard": "npx cypress run --record --key ed63325d-d5c4-4f4b-a73b-a8fcfefd373a",
+    "cypress-cloud-headed-chrome": "npx cypress run --record --key ed63325d-d5c4-4f4b-a73b-a8fcfefd373a --spec cypress/integration/examples/*.js --headed --browser chrome",
+    "cypress-mocharun": "npx cypress run --spec cypress/integration/examples/*.js --headed --browser chrome",
+    "cypress-allure":"cypress run --browser chrome --spec cypress/integration/examples/*.js --env allure=true",
+    "allure:clear": "rm -r allure-results/ allure-report cypress/screenshots || true",
+    "allure:report":  "allure serve allure-results --clean -o allure-report",
+    "allure:history": "mv -f allure-report/history allure-results/history && rm -r allure-report || true"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.12.0",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.5.1"
+  },
+  "dependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.0"
+  }
+}
